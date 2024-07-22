@@ -1,0 +1,68 @@
+/* Write your CSS here */
+
+.navbar-bg {
+  border: 1px solid #64748b;
+  border-width: 0px 0px 1px 0px;
+  padding: 10px 15px 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-dark-bg {
+  background-color: #333333;
+  border: 1px solid #64748b;
+  border-width: 0px 0px 1px 0px;
+  padding: 10px 15px 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  height: 25px;
+  width: 25px;
+}
+.text {
+  font-family: 'Roboto';
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0px 20px 0px 0px;
+}
+.dark-text {
+  color: #171f46;
+}
+
+.light-text {
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-bg {
+    padding: 14px 20px 14px 20px;
+  }
+
+  .logo {
+    height: 45px;
+    width: 45px;
+  }
+
+  .text {
+    font-size: 22px;
+    margin: 0px 30px 0px 20px;
+  }
+}
+
+.container {
+  padding-left: 0px;
+  list-style-type: none;
+  display: flex;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.link {
+  text-decoration: none;
+}
