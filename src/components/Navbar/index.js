@@ -8,10 +8,7 @@ const Navbar = () => (
   <ThemeContext.Consumer>
     {value => {
       const {isDarkTheme, toggleTheme} = value
-      const changeTheme = () => {
-        console.log('clicked')
-        toggleTheme(!isDarkTheme)
-      }
+
       if (!isDarkTheme) {
         return (
           <div className="navbar-bg">
@@ -32,7 +29,7 @@ const Navbar = () => (
               type="button"
               className="button"
               data-testid="theme"
-              onClick={changeTheme}
+              onClick={toggleTheme}
             >
               <img
                 src="https://assets.ccbp.in/frontend/react-js/dark-theme-img.png"
@@ -58,7 +55,7 @@ const Navbar = () => (
               <p className="text light-text">About</p>
             </Link>
           </div>
-          <button type="button" className="button" onClick={changeTheme}>
+          <button type="button" className="button" onClick={toggleTheme}>
             <img
               src="https://assets.ccbp.in/frontend/react-js/light-theme-img.png"
               className="logo"

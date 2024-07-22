@@ -7,6 +7,7 @@ import Home from './components/Home'
 import About from './components/About'
 
 import NotFound from './components/NotFound'
+import Navbar from './components/Navbar'
 
 import ThemeContext from './context/ThemeContext'
 
@@ -15,8 +16,8 @@ import './App.css'
 class App extends Component {
   state = {isDarkTheme: false}
 
-  toggleTheme = isDarkTheme => {
-    this.setState(prevState => ({isDarkTheme}))
+  toggleTheme = () => {
+    this.setState(prevState => ({isDarkTheme: !prevState.isDarkTheme}))
   }
 
   render() {
@@ -24,8 +25,12 @@ class App extends Component {
     console.log(isDarkTheme)
     return (
       <ThemeContext.Provider
-        value={{isDarkTheme, toggleTheme: this.toggleTheme}}
+        value={{
+          isDarkTheme,
+          toggleTheme: this.toggleTheme,
+        }}
       >
+        <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
